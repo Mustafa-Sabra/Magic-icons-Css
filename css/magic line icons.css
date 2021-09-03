@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000;
+}
+ul {
+  display: flex;
+  position: relative;
+}
+ul li {
+  list-style: none;
+  margin: 0 20px;
+  position: relative;
+  cursor: pointer;
+}
+ul li a {
+  text-decoration: none;
+}
+ul li::before {
+  font-family: fontAwesome;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0;
+  font-size: 6em;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul li:nth-of-type(1)::before {
+  content: "\f099";
+  color: #1da1f2;
+  border-bottom: 4px solid #1da1f2;
+}
+ul li:nth-of-type(2)::before {
+  content: "\f232";
+  color: #25d366;
+  border-bottom: 4px solid #25d366;
+}
+ul li:nth-of-type(3)::before {
+  content: "\f16a";
+  color: #ff0000;
+  border-bottom: 4px solid #ff0000;
+}
+ul li:hover::before {
+  height: 100%;
+}
+ul li a i {
+  color: #222;
+  font-size: 6em;
+}
